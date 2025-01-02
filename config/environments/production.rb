@@ -3,6 +3,8 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.session_store :cookie_store, key: '_my_api_app_session', secure: true, same_site: :strict
+
   # Code is not reloaded between requests.
   config.enable_reloading = false
 
